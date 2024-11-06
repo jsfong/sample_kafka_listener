@@ -1,0 +1,54 @@
+# APISIX INGRESS
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-server-deployment
+  labels:
+    app: sample-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sample-server
+  template:
+    metadata:
+      labels:
+        app: sample-server
+    spec:
+      containers:
+        - name: sample-server
+          image: localhost:5000/jsfong/sample_server:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-server
+spec:
+  type: ClusterIP
+  selector:
+    app: sample-server
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sample-server
+  namespace: playground
+spec:
+  ingressClassName: apisix
+  rules:
+    - http:
+        paths:
+        - backend:
+            service:
+              name: sample-server
+              port:
+                number: 8080
+          path: /
+          pathType: Prefix
+

@@ -1,0 +1,91 @@
+# NGINX INGRESS
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-server-deployment
+  labels:
+    app: sample-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sample-server
+  template:
+    metadata:
+      labels:
+        app: sample-server
+    spec:
+      containers:
+        - name: sample-server
+          image: localhost:5000/jsfong/sample_server:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-server
+spec:
+  type: ClusterIP
+  selector:
+    app: sample-server
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sample-server
+  namespace: playground
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+#    nginx.ingress.kubernetes.io/upstream-hash-by: "$binary_remote_addr"
+    nginx.ingress.kubernetes.io/upstream-hash-by: "$request_uri"
+#    nginx.ingress.kubernetes.io/upstream-hash-by: "$model_id"
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /model
+            pathType: Prefix
+            backend:
+              service:
+                name: sample-server
+                port:
+                  number: 8080
+#---
+#apiVersion: v1
+#kind: ConfigMap
+#metadata:
+#  name: my-nginx-config
+#data:
+#  nginx.conf: |
+#    location /model/([a-z0-9|\-]{36}) {
+#        set $model_id $1;
+#    }
+#---
+#apiVersion: networking.k8s.io/v1
+#kind: Ingress
+#metadata:
+#  name: sample-server
+#  namespace: playground
+#  annotations:
+#    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+#    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+#spec:
+#  ingressClassName: nginx
+#  rules:
+#    - host: kubernetes.docker.internal
+#      http:
+#        paths:
+#          - path: /
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: sample-server
+#                port:
+#                  number: 8080

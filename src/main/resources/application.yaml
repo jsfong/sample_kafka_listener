@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: sample_server
+
+server:
+  port: 8081
+
+logging:
+  level:
+    ROOT: INFO

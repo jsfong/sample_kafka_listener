@@ -1,0 +1,382 @@
+2024-09-06 13:56:47,397 INFO o.s.b.StartupInfoLogger [main] Starting SampleServerApplication using Java 17.0.5 with PID 30588 (C:\Workspace\src\kafka_openfaas_keda\sample_server\build\classes\java\main started by fonj555 in C:\Workspace\src\kafka_openfaas_keda\sample_server)
+2024-09-06 13:56:47,406 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-09-06 13:56:49,070 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-09-06 13:56:49,081 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-09-06 13:56:49,086 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-09-06 13:56:49,086 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-06 13:56:49,231 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-09-06 13:56:49,233 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1777 ms
+2024-09-06 13:56:50,016 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2024-09-06 13:56:50,054 INFO o.a.k.c.c.AbstractConfig [main] AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = sample_server-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-09-06 13:56:50,184 INFO o.a.k.c.s.a.AbstractLogin [main] Successfully logged in.
+2024-09-06 13:56:50,236 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka version: 3.7.1
+2024-09-06 13:56:50,238 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka commitId: e2494e6ffb89f828
+2024-09-06 13:56:50,238 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka startTimeMs: 1725602210234
+2024-09-06 13:56:50,680 INFO o.a.k.c.n.Selector [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Failed authentication with localhost/127.0.0.1 (channelId=-1) (Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are [])
+2024-09-06 13:56:50,681 INFO o.a.k.c.NetworkClient [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Node -1 disconnected.
+2024-09-06 13:56:50,683 ERROR o.a.k.c.NetworkClient [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) failed authentication due to: Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are []
+2024-09-06 13:56:50,684 WARN o.a.k.c.a.i.AdminMetadataManager [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Metadata update failed due to authentication error
+org.apache.kafka.common.errors.IllegalSaslStateException: Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are []
+2024-09-06 13:56:50,689 ERROR o.s.c.l.LogAccessor [main] Failed to create topics
+org.apache.kafka.common.errors.IllegalSaslStateException: Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are []
+2024-09-06 13:56:50,690 ERROR o.s.c.l.LogAccessor [main] Could not configure topics
+org.springframework.kafka.KafkaException: Failed to create topics
+	at org.springframework.kafka.core.KafkaAdmin.addTopics(KafkaAdmin.java:566)
+	at org.springframework.kafka.core.KafkaAdmin.addOrModifyTopicsIfNeeded(KafkaAdmin.java:413)
+	at org.springframework.kafka.core.KafkaAdmin.initialize(KafkaAdmin.java:263)
+	at org.springframework.kafka.core.KafkaAdmin.afterSingletonsInstantiated(KafkaAdmin.java:227)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at io.jsong.sample_server.SampleServerApplication.main(SampleServerApplication.java:10)
+Caused by: org.apache.kafka.common.errors.IllegalSaslStateException: Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are []
+2024-09-06 13:56:50,691 INFO o.a.k.c.u.AppInfoParser [kafka-admin-client-thread | sample_server-admin-0] App info kafka.admin.client for sample_server-admin-0 unregistered
+2024-09-06 13:56:50,691 INFO o.a.k.c.a.i.AdminMetadataManager [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+2024-09-06 13:56:50,691 INFO o.a.k.c.a.i.AdminMetadataManager [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+2024-09-06 13:56:50,691 INFO o.a.k.c.a.KafkaAdminClient$AdminClientRunnable [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Timed out 2 remaining operation(s) during close.
+2024-09-06 13:56:50,695 INFO o.a.k.c.m.Metrics [kafka-admin-client-thread | sample_server-admin-0] Metrics scheduler closed
+2024-09-06 13:56:50,695 INFO o.a.k.c.m.Metrics [kafka-admin-client-thread | sample_server-admin-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-09-06 13:56:50,696 INFO o.a.k.c.m.Metrics [kafka-admin-client-thread | sample_server-admin-0] Metrics reporters closed
+2024-09-06 13:56:50,763 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-09-06 13:56:50,767 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-09-06 13:56:50,797 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-06 13:56:50,821 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-09-06 13:57:35,655 INFO o.s.b.StartupInfoLogger [main] Starting SampleServerApplication using Java 17.0.5 with PID 28548 (C:\Workspace\src\kafka_openfaas_keda\sample_server\build\classes\java\main started by fonj555 in C:\Workspace\src\kafka_openfaas_keda\sample_server)
+2024-09-06 13:57:35,664 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-09-06 13:57:37,233 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8081 (http)
+2024-09-06 13:57:37,243 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-06 13:57:37,246 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-09-06 13:57:37,246 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-06 13:57:37,349 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-09-06 13:57:37,351 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1637 ms
+2024-09-06 13:57:38,126 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2024-09-06 13:57:38,169 INFO o.a.k.c.c.AbstractConfig [main] AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = sample_server-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-09-06 13:57:38,302 INFO o.a.k.c.s.a.AbstractLogin [main] Successfully logged in.
+2024-09-06 13:57:38,348 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka version: 3.7.1
+2024-09-06 13:57:38,350 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka commitId: e2494e6ffb89f828
+2024-09-06 13:57:38,350 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka startTimeMs: 1725602258347
+2024-09-06 13:57:38,750 INFO o.a.k.c.n.Selector [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Failed authentication with localhost/127.0.0.1 (channelId=-1) (Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are [])
+2024-09-06 13:57:38,752 INFO o.a.k.c.NetworkClient [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Node -1 disconnected.
+2024-09-06 13:57:38,753 ERROR o.a.k.c.NetworkClient [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Connection to node -1 (localhost/127.0.0.1:9092) failed authentication due to: Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are []
+2024-09-06 13:57:38,754 WARN o.a.k.c.a.i.AdminMetadataManager [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Metadata update failed due to authentication error
+org.apache.kafka.common.errors.IllegalSaslStateException: Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are []
+2024-09-06 13:57:38,759 ERROR o.s.c.l.LogAccessor [main] Failed to create topics
+org.apache.kafka.common.errors.IllegalSaslStateException: Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are []
+2024-09-06 13:57:38,759 ERROR o.s.c.l.LogAccessor [main] Could not configure topics
+org.springframework.kafka.KafkaException: Failed to create topics
+	at org.springframework.kafka.core.KafkaAdmin.addTopics(KafkaAdmin.java:566)
+	at org.springframework.kafka.core.KafkaAdmin.addOrModifyTopicsIfNeeded(KafkaAdmin.java:413)
+	at org.springframework.kafka.core.KafkaAdmin.initialize(KafkaAdmin.java:263)
+	at org.springframework.kafka.core.KafkaAdmin.afterSingletonsInstantiated(KafkaAdmin.java:227)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:986)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at io.jsong.sample_server.SampleServerApplication.main(SampleServerApplication.java:10)
+Caused by: org.apache.kafka.common.errors.IllegalSaslStateException: Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are []
+2024-09-06 13:57:38,760 INFO o.a.k.c.u.AppInfoParser [kafka-admin-client-thread | sample_server-admin-0] App info kafka.admin.client for sample_server-admin-0 unregistered
+2024-09-06 13:57:38,760 INFO o.a.k.c.a.i.AdminMetadataManager [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+2024-09-06 13:57:38,760 INFO o.a.k.c.a.i.AdminMetadataManager [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+2024-09-06 13:57:38,761 INFO o.a.k.c.a.KafkaAdminClient$AdminClientRunnable [kafka-admin-client-thread | sample_server-admin-0] [AdminClient clientId=sample_server-admin-0] Timed out 2 remaining operation(s) during close.
+2024-09-06 13:57:38,764 INFO o.a.k.c.m.Metrics [kafka-admin-client-thread | sample_server-admin-0] Metrics scheduler closed
+2024-09-06 13:57:38,764 INFO o.a.k.c.m.Metrics [kafka-admin-client-thread | sample_server-admin-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-09-06 13:57:38,764 INFO o.a.k.c.m.Metrics [kafka-admin-client-thread | sample_server-admin-0] Metrics reporters closed
+2024-09-06 13:57:38,832 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8081"]
+2024-09-06 13:57:38,848 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8081 (http) with context path '/'
+2024-09-06 13:57:38,877 INFO o.a.k.c.c.AbstractConfig [main] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-keda-consumer-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = keda-consumer
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-09-06 13:57:38,915 INFO o.a.k.c.t.i.KafkaMetricsCollector$StateLedger [main] initializing Kafka metrics collector
+2024-09-06 13:57:38,926 INFO o.a.k.c.s.a.AbstractLogin [main] Successfully logged in.
+2024-09-06 13:57:38,967 INFO o.a.k.c.c.AbstractConfig [main] These configurations '[spring.json.use.type.headers, spring.json.trusted.packages]' were supplied but are not used yet.
+2024-09-06 13:57:38,967 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka version: 3.7.1
+2024-09-06 13:57:38,967 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka commitId: e2494e6ffb89f828
+2024-09-06 13:57:38,968 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka startTimeMs: 1725602258967
+2024-09-06 13:57:38,971 INFO o.a.k.c.c.i.LegacyKafkaConsumer [main] [Consumer clientId=consumer-keda-consumer-1, groupId=keda-consumer] Subscribed to topic(s): keda
+2024-09-06 13:57:38,997 INFO o.a.k.c.n.Selector [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-keda-consumer-1, groupId=keda-consumer] Failed authentication with localhost/127.0.0.1 (channelId=-1) (Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are [])
+2024-09-06 13:57:38,998 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-keda-consumer-1, groupId=keda-consumer] Node -1 disconnected.
+2024-09-06 13:57:38,998 INFO o.s.b.StartupInfoLogger [main] Started SampleServerApplication in 3.824 seconds (process running for 4.842)
+2024-09-06 13:57:38,998 ERROR o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-keda-consumer-1, groupId=keda-consumer] Connection to node -1 (localhost/127.0.0.1:9092) failed authentication due to: Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are []
+2024-09-06 13:57:38,999 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-keda-consumer-1, groupId=keda-consumer] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-09-06 13:57:39,002 ERROR o.s.c.l.LogAccessor [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Authentication/Authorization Exception and no authExceptionRetryInterval set
+org.apache.kafka.common.errors.IllegalSaslStateException: Unexpected handshake request with client mechanism PLAIN, enabled mechanisms are []
+2024-09-06 13:57:39,004 ERROR o.s.c.l.LogAccessor [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Fatal consumer exception; stopping container
+2024-09-06 13:57:39,009 INFO o.a.k.c.c.i.AbstractCoordinator [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-keda-consumer-1, groupId=keda-consumer] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-09-06 13:57:39,010 INFO o.a.k.c.c.i.AbstractCoordinator [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-keda-consumer-1, groupId=keda-consumer] Request joining group due to: consumer pro-actively leaving the group
+2024-09-06 13:57:39,017 INFO o.a.k.c.m.Metrics [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics scheduler closed
+2024-09-06 13:57:39,017 INFO o.a.k.c.m.Metrics [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-09-06 13:57:39,017 INFO o.a.k.c.m.Metrics [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-09-06 13:57:39,018 INFO o.a.k.c.m.Metrics [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics reporters closed
+2024-09-06 13:57:39,024 INFO o.a.k.c.u.AppInfoParser [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] App info kafka.consumer for consumer-keda-consumer-1 unregistered
+2024-09-06 13:57:39,025 INFO o.s.c.l.LogAccessor [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] keda-consumer: Consumer stopped
